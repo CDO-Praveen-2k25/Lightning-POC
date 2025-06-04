@@ -24,7 +24,7 @@ export default function ImageGallery() {
         },
       }}
     >
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 py-10 place-items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10">
         {images.map((img, index) => (
           <a
             key={index}
@@ -38,7 +38,7 @@ export default function ImageGallery() {
               alt={img.alt}
               width={200}
               height={150}
-              unoptimized
+              priority={true}
             />
           </a>
         ))}
